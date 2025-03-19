@@ -1,1 +1,1 @@
-# Variable-Battle
+# Variable-Battle enjoy game!
