@@ -36,19 +36,20 @@ while True:
 
     # player action select
 
-    if player_action == "1":
-        player_now_attack = True
-        bot_hp, bot_block = vba.player_attack_def(player_attack, bot_hp, bot_block)
-    elif player_action == "2":
-        player_hp = vba.player_heal_def(player_heal, player_hp)
-    elif player_action == "3":
-        player_block = vba.player_block_def(player_block)
-    elif player_action == "4":
-        player_attack = vba.player_increase_attack_def(player_attack)
-    elif player_action == "5":
-        player_heal = vba.player_increase_heal_def(player_heal)
-    else:
-        print("turn skipd")
+if player_action == "1" or player_action == "a":
+    player_now_attack = True
+    bot_hp, bot_block = vba.player_attack_def(player_attack, bot_hp, bot_block)
+elif player_action == "2" or player_action == "h":
+    player_hp = vba.player_heal_def(player_heal, player_hp)
+elif player_action == "3" or player_action == "b":
+    player_block = vba.player_block_def(player_block)
+elif player_action == "4" or player_action == "ia":
+    player_attack = vba.player_increase_attack_def(player_attack)
+elif player_action == "5" or player_action == "ih":
+    player_heal = vba.player_increase_heal_def(player_heal)
+else:
+    print("Turn skipped!")
+
 
     # bot place 
 
