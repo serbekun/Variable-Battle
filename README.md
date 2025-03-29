@@ -1,55 +1,58 @@
-# Variable-Battle game enjoy playing!
+# Variable-Battle Game: Enjoy Playing!
 
-- for start game start file `vbm.py` encode "variable battle main"
+- To start the game, run the file `vbm.py`, which stands for "Variable Battle Main."
 
-- 1) explanation what doing exist file
-- 2) constant meaning
-- 3) game rule 
+- Explanation of existing files, constants, and game rules.
 
+## Explanation of Existing Files
 
-## exist file explanation what doing
-### `vba.py` decode "variable battle main" 
-- main file where does the function come from
-### `vbc` decode "variable battle core"
-- in this file exist def such as
-- `show_display` use for show all info about now situashon
-- `cat_limits` used to avoid exceeding limits
-- `check_end_round` used to chek died player or bot and last round for know continue or stop game beocose player lose
-### `vba` decode "variable battle actions"
-- this file exist defs fore commit variables actions such as
-##### defs for player
-- `player_attack_def` used for attack bot from player
-- `plaer_heal_def` used for heal player
-- `player_block_def` used for activate block for player
-- `player_increase_attack` used for increase player attack
-- `player_increase_heal` used for increase player heal
-##### defs for bot
-- `bot_attack_def` used for attack bot from bot
-- `bot_heal_def` used for heal bot
-- `bot_block_def` used for activate block for bot
-- `bot_increase_attack` used for increase bot attack
-- `bot_increase_heal` used for increase bot heal
-### `vbab` decode "variable battle bot action"
-- this file need for select bot action
-- this file exist def
-- `bot_select_action` used for select bot actions
+### `vba.py` (decodes to "Variable Battle Actions")
+- The main file where all the game functions are defined.
 
-- ## constant meaning
-- `ROUND_COUNT_LIMITS = 100` select last round in match
-- `PLAYER_DEAD_HP = 0` select player dead zone
-- `BOT_DEAD_HP = 0` too select bot dead zone
-- `PLAYER_ATTACK_INC` = 5 sellected player attack increase speed
-- `PLAYER_HEAL_INC` = 5 sellected player heal increase speed
-- `BOT_ATTACK_INC` = 5 sellected bot attack increase speed
-- `BOT_HEAL_INC` = 5 sellected bot heal increase speed
-  
-## rules
+### `vbc` (decodes to "Variable Battle Core")
+- This file contains definitions such as:
+  - `show_display`: Displays the current game situation.
+  - `cat_limits`: Prevents exceeding preset limits.
+  - `check_end_round`: Checks if the player or bot has died or if the round limit has been reached, determining whether the game continues or stops because the player has lost.
 
-- you can attack with type `1` or `a` if bot exist block attack block and bot not get damage max damege which can used `50` you also can increase attack
-- you can heal with type `2` or `h` max health `150`
-- you can blcok with type `3` or `b` if block exist damege from bot dimese
-- you can increase attack with type `4` of `ia` max attack `50`
-- you can increase heal with type `5` `ih` max heal `50`
-- for win you must kill bot if bot health less `0` you win
-- if round count more `100` you lose game
-- if your hp less `0` you lose game
+### `vba` (decodes to "Variable Battle Actions")
+- This file contains functions related to managing variable actions, such as:
+
+#### Functions for the Player:
+- `player_attack_def`: Used for attacking the bot.
+- `player_heal_def`: Used for healing the player.
+- `player_block_def`: Activates a block for the player.
+- `player_increase_attack`: Increases the player's attack.
+- `player_increase_heal`: Increases the player's healing ability.
+
+#### Functions for the Bot:
+- `bot_attack_def`: Used for the bot to attack the player.
+- `bot_heal_def`: Used for healing the bot.
+- `bot_block_def`: Activates a block for the bot.
+- `bot_increase_attack`: Increases the bot's attack.
+- `bot_increase_heal`: Increases the bot's healing ability.
+
+### `vbab` (decodes to "Variable Battle Bot Action")
+- This file is used to select the bot's actions and includes the function:
+  - `bot_select_action`: Determines the bot's actions during a turn.
+
+## Constant Definitions
+
+- `ROUND_COUNT_LIMITS = 100`: Sets the maximum number of rounds in a match.
+- `PLAYER_DEAD_HP = 0`: Defines the player's death condition.
+- `BOT_DEAD_HP = 0`: Defines the bot's death condition.
+- `PLAYER_ATTACK_INC = 5`: Specifies the rate at which the player's attack increases.
+- `PLAYER_HEAL_INC = 5`: Specifies the rate at which the player's healing ability increases.
+- `BOT_ATTACK_INC = 5`: Specifies the rate at which the bot's attack increases.
+- `BOT_HEAL_INC = 5`: Specifies the rate at which the bot's healing ability increases.
+
+## Rules
+
+- You can attack by entering `1` or `a`. If the bot is blocking, the attack is blocked, and the bot takes no damage. The maximum attack damage is `50`. You can also increase your attack.
+- You can heal by entering `2` or `h`. The maximum health is `150`.
+- You can block by entering `3` or `b`. If the block is active, damage from the bot is reduced.
+- You can increase your attack by entering `4` or `ia`. The maximum attack value is `50`.
+- You can increase your healing ability by entering `5` or `ih`. The maximum healing value is `50`.
+- To win, you must defeat the bot by reducing its health below `0`. If the bot's health is less than `0`, you win.
+- If the round count exceeds `100`, you lose the game.
+- If your health drops below `0`, you lose the game.
