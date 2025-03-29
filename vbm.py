@@ -1,5 +1,5 @@
 import vbc
-import vbaa
+import vbab
 import vba
 
 # inzelashion value
@@ -35,25 +35,25 @@ while True:
     player_action = input(":")
 
     # player action select
-
-if player_action == "1" or player_action == "a":
-    player_now_attack = True
-    bot_hp, bot_block = vba.player_attack_def(player_attack, bot_hp, bot_block)
-elif player_action == "2" or player_action == "h":
-    player_hp = vba.player_heal_def(player_heal, player_hp)
-elif player_action == "3" or player_action == "b":
-    player_block = vba.player_block_def(player_block)
-elif player_action == "4" or player_action == "ia":
-    player_attack = vba.player_increase_attack_def(player_attack)
-elif player_action == "5" or player_action == "ih":
-    player_heal = vba.player_increase_heal_def(player_heal)
-else:
-    print("Turn skipped!")
+    
+    if player_action == "1" or player_action == "a":
+        player_now_attack = True
+        bot_hp, bot_block = vba.player_attack_def(player_attack, bot_hp, bot_block)
+    elif player_action == "2" or player_action == "h":
+        player_hp = vba.player_heal_def(player_heal, player_hp)
+    elif player_action == "3" or player_action == "b":
+        player_block = vba.player_block_def(player_block)
+    elif player_action == "4" or player_action == "ia":
+        player_attack = vba.player_increase_attack_def(player_attack)
+    elif player_action == "5" or player_action == "ih":
+        player_heal = vba.player_increase_heal_def(player_heal)
+    else:
+        print("Turn skipped!")
 
 
     # bot place 
 
-    bot_action = vbaa.bot_select_action(player_hp, player_attack, player_heal, player_block, bot_hp, bot_attack, bot_heal, bot_block)
+    bot_action = vbab.bot_select_action(player_hp, player_attack, player_heal, player_block, bot_hp, bot_attack, bot_heal, bot_block)
 
     if bot_action == 1:
         player_hp, player_block = vba.bot_attack_def(bot_attack, player_hp, player_block)
