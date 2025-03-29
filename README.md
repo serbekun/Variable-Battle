@@ -29,7 +29,7 @@
 - `bot_block_def` used for activate block for bot
 - `bot_increase_attack` used for increase bot attack
 - `bot_increase_heal` used for increase bot heal
-### `vbab` decode "variable battle ai action"
+### `vbab` decode "variable battle bot action"
 - this file need for select bot action
 - this file exist def
 - `bot_select_action` used for select bot actions
