@@ -1,3 +1,3 @@
 # Variable-Battle enjoy game!
 
-- for start game start file 
+- for start game start file `vbm.py`
