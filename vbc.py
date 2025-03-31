@@ -10,7 +10,7 @@ def show_display(player_hp, player_attack, player_heal, player_block, bot_hp, bo
     print(f"Player attack = {player_attack} | Bot attack = {bot_attack}")
     print(f"Player heal = {player_heal} | Bot heal = {bot_heal}")
     print("block status", player_block)
-    print("1. Attack\n2. Heal\n3. Block\n4. Increasive attack\n5. Increasive heal")
+    print("1. Attack\n2. Heal\n3. Block\n4. Increase attack\n5. Increase heal")
 
 def cat_limits(player_hp, player_attack, player_heal, bot_hp, bot_attack, bot_heal):
 
@@ -31,14 +31,14 @@ def cat_limits(player_hp, player_attack, player_heal, bot_hp, bot_attack, bot_he
 
     return player_hp, player_attack, player_heal, bot_hp, bot_attack, bot_heal
 
-def chek_end_round(round_count, player_hp, bot_hp):
+def check_end_round(round_count, player_hp, bot_hp):
 
     if round_count > ROUND_COUNT_LIMITS:
-        print("you lose becose time limit")
+        print("you lose because time limit")
         return False
 
     elif player_hp < PLAYER_DEAD_HP:
-        print("you lose becose you died")
+        print("you lose because you died")
         return False
     
     elif bot_hp < BOT_DEAD_HP:
@@ -46,5 +46,5 @@ def chek_end_round(round_count, player_hp, bot_hp):
         return False
     
     else:
-        print("you can continyu")
+        print("you can continue")
         return True
