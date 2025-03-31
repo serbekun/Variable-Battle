@@ -2,7 +2,7 @@ import vbc
 import vbab
 import vba
 
-# inzelashion value
+# initialize value
 
 round_count = 0
 
@@ -26,7 +26,7 @@ bot_action = 0
 
 while True:
     
-    if vbc.chek_end_round(round_count, player_hp, bot_hp) == False:
+    if vbc.check_end_round(round_count, player_hp, bot_hp) == False:
         print("exiting")
         exit(1)
         
