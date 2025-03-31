@@ -28,9 +28,9 @@ def player_block_def(player_block):
     if player_block == True:
         return True
     
-    block_chanse = random.randint(1, 5)
+    block_chance = random.randint(1, 5)
     
-    if block_chanse != 5:
+    if block_chance != 5:
         player_block = True
     
     return player_block
@@ -63,9 +63,9 @@ def bot_block_def(bot_block):
     if bot_block == True:
         return True
     
-    block_chanse = random.randint(1, 5)
+    block_chance = random.randint(1, 5)
     
-    if block_chanse != 5:
+    if block_chance != 5:
         bot_block = True
     
     return bot_block
